@@ -1,7 +1,7 @@
-Parse ← ⍉↯∞_2⊜⋕¬⊸∈" \n"
+Parse ← ⍉↯∞_2⊜⋕⊸≥@0
 
 SortDiff  ← /+⌵/-≡⍆
-MultCount ← /+♭⊞(×⟜=)°⊟⇌
+MultCount ← ⧻⊚×⟜⊞=°⊟
 
 PartOne ← SortDiff Parse
 PartTwo ← MultCount Parse
