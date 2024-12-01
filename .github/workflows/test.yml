@@ -17,7 +17,7 @@ jobs:
           path: ~/.cargo
           key: ${{ runner.os }}-cargo
       - run: rustup update stable && rustup default stable
-      - run: cargo install uiua
+      - run: cargo install --git https://github.com/uiua-lang/uiua uiua
       - run: |
           source test.sh
           for DAY in $(ls -d [0-9][0-9]); do
