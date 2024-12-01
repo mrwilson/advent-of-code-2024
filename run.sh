@@ -23,7 +23,7 @@ if [[ $TESTS_ONLY != "true" ]]; then
   if [[ "${PART}" -eq 1  ]]; then
     PART=One
   else
-    Part=Two
+    PART=Two
   fi
 
   uiua eval "Ex~\"${DAY}/day_${DAY}.ua\" Ex~Part${PART} &fras \"${DAY}/input.txt\""
