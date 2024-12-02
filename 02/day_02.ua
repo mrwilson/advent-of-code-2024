@@ -1,6 +1,6 @@
-RunningDiff ← -°⊟⍉◫2
+RunningDiff ← ≡/-◫2
 Filter      ← ××⊃⊃(/×≤3⌵|/×≥1⌵|=1⧻◴±)
-Dampener    ← ♭₋₁⊞(⍜⊏≡⋅[])⊃(⇡⧻|¤)
+Dampener    ← ♭₋₁⊞⍜↻↘₁⊃(⇡⧻)¤
 
 PartOne ← /+⊜(Filter RunningDiff ⊜⋕⊸≠@ )⊸≠@\n
 PartTwo ← /+⊜(≠0/+≡(Filter RunningDiff) Dampener ⊜⋕⊸≠@ )⊸≠@\n
