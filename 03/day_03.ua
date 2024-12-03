@@ -1,14 +1,13 @@
 Digits  ← ⋕⍜⍉↘₁
-Markers ← +≡◇⊃(×2≍"don't()"|≍"do()")⊢⍉
+Markers ← +×2≡◇(∩≍"don't()","do()")⊢⍉
 Toggles ← ↘₁⬚1\(⨬(∘|1|0):)
 
-Parse ← ⬚@0regex "mul\\((\\d+),(\\d+)\\)|do\\(\\)|don\\'t\\(\\)"
+Parse ← ⬚@0regex $ mul\((\d+),(\d+)\)|do\(\)|don\'t\(\)
 
 Mult₁ ← ≡/×Digits
 
 PartOne ← /+Mult₁Parse
 PartTwo ← /+×⊃(Toggles Markers|Mult₁) Parse
-
 ┌─╴test
   ⍤⤙≍ [[1 2] [3 4]] Digits Parse "mul(1,2)asdfasdfmul(3,4)"
   ⍤⤙= 14 PartOne "mul(1,2)asdfasdfmul(3,4)"
