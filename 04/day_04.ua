@@ -8,7 +8,7 @@ Finders ← {
 }
 
 PartOne ← /+♭≡◇⌕ Finders "XMAS" Parse
-PartTwo ← /+♭≡◇⌕ [∩⟜⍉⟜≡⇌] ["M\WS" "\WA\W" "M\WS"] Parse
+PartTwo ← ⧻⊚=2♭/+≡◇⌕ ↙4 Finders "MAS" Parse
 
 ┌─╴test
   ⍤⤙≍ 4 PartOne&fras "04/sample1.txt"
