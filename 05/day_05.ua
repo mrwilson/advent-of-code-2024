@@ -1,24 +1,26 @@
-ParseRules ← ↯∞_2⊜⋕⊸(×∩≠@\n,@|)▽\↧¬⊸⌕"\n\n"
-ParseInput ← ⊜(□⊜⋕⊸≠@,)⊸≠@\n▽\↥⊸⌕"\n\n"
+Rules ← ↯1_∞_2⊜⋕⊸(×∩≠@\n,@|)▽\↧¬⊸⌕"\n\n"
+Input ← ⊜(□⊜⋕⊸≠@,)⊸≠@\n▽\↥⊸⌕"\n\n"
 
-ValidPages ← ∈:⧈₂∘
+ValidPages ← ≡◇(/×∈:⧈₂∘)
 
-MiddlePage ← ⊣⊢⬚0↯2_∞
-
-PartOne ← /+≡◇MiddlePage ▽ ≡◇(/×ValidPages) ⊃(ParseInput|¤ParseRules|ParseInput)
+MiddlePage       ← ⊣⊢⬚0↯2_∞
+SortInvalidPages ← ⍚(⊏⍏:∩°□°⊟)⍉⊟⟜⍚(≡/+/+⊞(≍⊟).◇∘)
+PartOne          ← /+≡◇MiddlePage ▽ ValidPages ⊃(Input|Rules|Input)
 
 PartTwo ← (
-  ▽ ¬ ≡◇(/×ValidPages) ⊃(ParseInput|¤ParseRules|ParseInput|¤ParseRules)
-
-  /+≡(MiddlePage ⊏⍏:∩°□°⊟)⍉⊟⟜⍚(≡/+/+⊞(≍⊟).◇∘)
+  ⊃(Input|Rules|Input|Rules)
+  ▽ ¬ ValidPages
+  SortInvalidPages
+  /+≡◇MiddlePage
 )
+
 ┌─╴test
-  ⍤⤙= 21 ⧻ ParseRules &fras "05/sample.txt"
-  ⍤⤙= 6 ⧻ ParseInput &fras "05/sample.txt"
+  ⍤⤙= 21 ⧻⊢ Rules &fras "05/sample.txt"
+  ⍤⤙= 6 ⧻ Input &fras "05/sample.txt"
 
   ⍤⤙= 3 MiddlePage [1 2 3 4 5]
 
-  ⍤⤙≍ [1] ≡◇(/×ValidPages) ⊃(↙1ParseInput|¤ParseRules) &fras "05/sample.txt"
+  ⍤⤙≍ [1 1 1 0 0 0] ValidPages ⊃(Input|Rules) &fras "05/sample.txt"
 
   ⍤⤙= 143 PartOne &fras "05/sample.txt"
   ⍤⤙= 123 PartTwo &fras "05/sample.txt"
