@@ -26,7 +26,7 @@ if [[ $TESTS_ONLY != "true" ]]; then
     PART=Two
   fi
 
-  uiua eval "Ex~\"${DAY}/day_${DAY}.ua\" Ex~Part${PART} &fras \"${DAY}/input.txt\""
+  uiua eval "Ex~\"${DAY}/day_${DAY}.ua\" under now Ex~Part${PART} &fras \"${DAY}/input.txt\""
 fi
 
 
