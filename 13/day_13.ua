@@ -1,14 +1,16 @@
-Parse ← ⊜(↯3_2⋕⍜↘₄⍚↘₂⊏[3 5 9 11 13 14]⊜□⊸≥@0)¬⊸⌕"\n\n"
+Parse ← ↯∞_3_2⊜⋕×⊸⊃(≥@0|≤@9)
 
-Invert ← ⊃(/-≡/×|⍜⊢⇌⍉⍜°⊟⊓¯⇌)⍉⍜⊢⇌
-Mult   ← ≡(/+×)⍉
+Solns ← (
+  ⊃↙↘2
+  ⊸(/-⧈/×¤¤2↻1♭)⍜♭(×↻₁⊂⊸⌵¯1_¯1)≡⇌⇌
+  ⊙≡(/+×)
+  ÷
+)
 
-Solns ← ÷⊙Mult Invert ⊃(↙2|↘2)
-
-Cost ← /+××3_1⟜≍⟜⁅
+Cost ← /+×⟜=⟜⁅×3_1
 
 PartOne ← /+ ≡(Cost Solns) Parse
-PartTwo ← /+ ≡(Cost Solns ⍜⊣(+10000000000000)) Parse
+PartTwo ← /+ ≡(Cost Solns ⍜⊣(+1e13)) Parse
 
 ┌─╴test
   ⍤⤙≍ [[94 34] [22 67] [8400 5400]] ⊢ Parse &fras "13/sample.txt"
