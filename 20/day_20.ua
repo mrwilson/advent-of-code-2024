@@ -5,6 +5,7 @@ Path ← ⊢path(▽⊸∊+A₂¤|≍⊙⋅∘)
 Cheats ← ⟜-/+⌵∩(/-⍉⧅₂<):°⊏
 
 PartOne ← /+≥100▽≤2 Cheats Path Parse
+PartTwo ← /+≥100▽≤20 Cheats Path Parse
 
 ┌─╴test
   CheatCountMatch ← ≍⊟°▽⍆▽⊸±
